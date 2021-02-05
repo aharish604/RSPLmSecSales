@@ -1,0 +1,13 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/add_mat_lay"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:paddingBottom="@dimen/padding_normal_16"
+    android:paddingLeft="@dimen/padding_normal_16"
+    android:paddingRight="@dimen/padding_normal_16"
+    android:paddingTop="@dimen/padding_normal_16"
+    android:text="@string/lbl_please_add_dms_divsion"
+    android:textSize="@dimen/medium_text"
+    android:textStyle="bold"
+    android:visibility="gone" />

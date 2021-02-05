@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardBackgroundColor">
+
+    <include layout="@layout/appbar_layout" />
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nsvContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    style="@style/UtilsItemSpacing"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        style="@style/Header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="0dp"
+                        android:paddingTop="@dimen/padding_normal_16"
+                        android:text="@string/lbl_sales" />
+
+                    <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                        android:id="@+id/spWeekOff"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_alwaysShowFloatingLabel="true"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_floatingLabelText="@string/lbl_week_off"
+                        app:ms_multiline="false" />
+
+                    <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                        android:id="@+id/spSalesOff"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_alwaysShowFloatingLabel="true"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_floatingLabelText="@string/lbl_sales_ofc"
+                        app:ms_multiline="false" />
+
+                    <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                        android:id="@+id/spSalesGrp"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_alwaysShowFloatingLabel="true"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_floatingLabelText="@string/lbl_sales_grp"
+                        app:ms_multiline="false" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiZone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etZone"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/lbl_zone"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        style="@style/Header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="0dp"
+                        android:paddingTop="@dimen/padding_normal_16"
+                        android:text="@string/lbl_tax_classification" />
+                    <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                        android:id="@+id/spRetClassfication"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_alwaysShowFloatingLabel="true"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_floatingLabelText="@string/lbl_classfication"
+                        app:ms_multiline="false" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiVatNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etVatNo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/lbl_vat_no"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiTaxOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etTaxOne"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/lbl_tax_number_one"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiTaxTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etTaxTwo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/lbl_tax_number_two"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiTaxthree"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etTaxThree"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/lbl_tax_number_three"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiTaxFour"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etTaxFour"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/lbl_tax_number_four"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

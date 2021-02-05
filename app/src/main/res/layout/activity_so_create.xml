@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".so.socreate.SOCreateActivity">
+
+    <include layout="@layout/appbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical"
+        >
+        <include layout="@layout/ll_retiler_name_no" />
+
+        <include layout="@layout/single_line_lay" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                android:layout_marginRight="@dimen/padding_normal_16"
+                android:layout_marginLeft="@dimen/padding_normal_16"
+                android:layout_marginTop="@dimen/padding_normal_16"
+                android:layout_marginBottom="@dimen/padding_normal_8"
+                android:id="@+id/spDMSDivision"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ms_alwaysShowFloatingLabel="true"
+                app:ms_enableFloatingLabel="true"
+                app:ms_floatingLabelText="@string/division"
+                tools:layout_editor_absoluteX="104dp" />
+        </LinearLayout>
+
+        <include layout="@layout/filter_display_layout"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+            <!--style="@style/UtilsItemSpacing"-->
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view"
+                        style="@style/CardViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/padding_normal_4">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@+id/keyboard_custom_invoice_sel"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <include layout="@layout/content_main" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <android.inputmethodservice.KeyboardView
+                            android:id="@+id/keyboard_custom_invoice_sel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:keyPreviewLayout="@layout/preview"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

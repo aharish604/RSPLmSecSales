@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/vg_root"
+    android:orientation="vertical"
+    android:gravity="right"
+    android:layout_marginTop="@dimen/padding_normal_8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/lHeaderSpinner"
+        android:paddingLeft="@dimen/padding_normal_8"
+        android:visibility="gone"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.arteriatech.ss.msecsales.rspl.ui.CustomAutoComplete
+            android:id="@+id/autUOM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionSearch"
+            android:cursorVisible="false"
+            android:gravity="center"
+            android:focusable="false"
+            style="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar"
+            android:inputType="textAutoComplete|textAutoCorrect"
+            android:textColor="@color/BLACK" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/padding_normal_8"
+            android:layout_marginRight="@dimen/padding_normal_16"
+            android:layout_height="wrap_content">
+            <include layout="@layout/single_line_lay"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvItemUOM"
+        android:paddingLeft="@dimen/padding_normal_8"
+        android:paddingRight="@dimen/padding_normal_8"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/black" />
+    <!--android:gravity="left"-->
+</LinearLayout>

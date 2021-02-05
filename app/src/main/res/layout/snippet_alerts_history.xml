@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_alerts_list_sel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/swipe_delete_layout" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvOrderDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_normal_16">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/view_foreground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/icon_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/icon_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fillAfter="false"
+                            android:fillEnabled="false">
+
+                            <TextView
+                                android:id="@+id/icon_text"
+                                android:layout_width="@dimen/_38sdp"
+                                android:layout_height="@dimen/_38sdp"
+                                android:layout_centerInParent="true"
+                                android:text="S"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:background="@drawable/bg_circle"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/_22sdp" />
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:visibility="gone"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/ic_call_black_24dp" />
+                        </RelativeLayout>
+
+                       <!-- <RelativeLayout
+                            android:id="@+id/icon_front"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fillAfter="false"
+                            android:fillEnabled="false">
+
+                            <ImageView
+                                android:id="@+id/iv_mobile"
+                                android:visibility="gone"
+                                android:layout_width="@dimen/_38sdp"
+                                android:layout_height="@dimen/_38sdp" />
+
+                            <TextView
+                                android:id="@+id/icon_text"
+                                android:layout_width="@dimen/_38sdp"
+                                android:layout_height="@dimen/_38sdp"
+                                android:layout_centerInParent="true"
+                                android:text="S"
+                                android:src="@drawable/bg_circle"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/_22sdp" />
+                        </RelativeLayout>-->
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/beatDistance"
+                        android:layout_width="@dimen/so_list_delv_image"
+                        android:layout_height="@dimen/so_list_delv_image"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_account_balance_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/AlertMsg"
+                        style="@style/UtilsMediumTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginStart="16dp"
+                        android:gravity="start"
+                        android:paddingRight="@dimen/_8sdp"
+                        android:text=""
+                        app:layout_constraintEnd_toStartOf="@+id/guideline1"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/icon_container"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.69" />
+
+                    <ImageView
+                        android:id="@+id/ivExpand"
+                        android:layout_width="@dimen/so_details_arrow_image"
+                        android:layout_height="@dimen/so_details_arrow_image"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginTop="7dp"
+                        android:visibility="gone"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_arrow_down_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/tv_retailer_owner_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        android:text="TextView"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline1"
+                        app:layout_constraintStart_toEndOf="@+id/icon_container"
+                        app:layout_constraintTop_toBottomOf="@+id/AlertMsg" />
+
+                    <ImageView
+                        android:id="@+id/iv_appointment_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_cake_black_24dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_anversiry_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_appointment_icon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_cake_black_24dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_dob_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_anversiry_icon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_cake_black_24dp" />
+
+                    <!-- <TextView
+                         android:id="@+id/AlertCreatedOn"
+                         style="@style/UtilsMediumTextStyle"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="4dp"
+                         android:layout_marginRight="8dp"
+                         android:layout_marginTop="0dp"
+                         android:visibility="gone"
+                         android:gravity="right"
+                         android:text="TextView"
+                         app:layout_constraintLeft_toLeftOf="@+id/guideline1"
+                         app:layout_constraintRight_toLeftOf="@+id/ivExpand"
+                         app:layout_constraintTop_toTopOf="parent" />-->
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+
+                        android:id="@+id/iv_mobile"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="4dp"
+                        android:padding="8dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/ic_call_black_24dp" />
+
+
+                    <LinearLayout
+                        android:layout_width="@dimen/width_zero_dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_RetailerName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:singleLine="false"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="@dimen/medium_text"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_retailer_owner_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textColor="@color/BLACK"
+                                android:textSize="@dimen/medium_text" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"
+                        android:gravity="right|center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv_dob_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="@dimen/padding_fifteen_dip" />
+
+
+                        <ImageView
+                            android:id="@+id/iv_anversiry_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/iv_dob_icon"
+                            android:paddingRight="@dimen/padding_fifteen_dip" />
+
+                        <ImageView
+                            android:id="@+id/iv_appointment_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/iv_anversiry_icon"
+                            android:paddingRight="@dimen/padding_fifteen_dip" />
+                    </RelativeLayout>
+
+                    &lt;!&ndash;  <LinearLayout
+                          android:layout_width="@dimen/width_zero_dip"
+                          android:layout_height="match_parent"
+                          android:layout_weight="0.3"
+                          android:gravity="right"
+                          android:orientation="horizontal" >
+
+                          <ImageView
+                              android:id="@+id/iv_dob_icon"
+                              android:layout_weight="1"
+                              android:layout_width="@dimen/width_zero_dip"
+                              android:layout_height="wrap_content"
+                              android:paddingRight="@dimen/padding_fifteen_dip"
+                              />
+
+
+                          <ImageView
+                              android:id="@+id/iv_anversiry_icon"
+                              android:layout_width="@dimen/width_zero_dip"
+                              android:layout_height="wrap_content"
+                              android:layout_weight="1"
+                              android:paddingRight="@dimen/padding_fifteen_dip"/>
+
+
+                      </LinearLayout>&ndash;&gt;
+
+
+                </LinearLayout>-->
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </FrameLayout>
+
+    <include layout="@layout/single_line_lay" />
+
+</LinearLayout>

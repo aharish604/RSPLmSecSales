@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/appbar_layout" />
+
+
+    <include layout="@layout/ll_retiler_name_no" />
+
+    <include layout="@layout/single_line_lay" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/nsvContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/keyboard_custom_invoice_sel">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/padding_normal_16"
+                android:orientation="vertical">
+
+                <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                    android:id="@+id/sp_complaint_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ms_alwaysShowFloatingLabel="true"
+                    app:ms_enableFloatingLabel="true"
+                    app:ms_floatingLabelText="@string/lbl_complaint_category2"
+                    app:ms_multiline="true" />
+
+                <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                    android:id="@+id/sp_cust_complaints"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ms_alwaysShowFloatingLabel="true"
+                    app:ms_enableFloatingLabel="true"
+                    app:ms_floatingLabelText="@string/lbl_complaint2"
+                    app:ms_multiline="true" />
+
+                <LinearLayout
+                    android:id="@+id/ll_cust_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                        android:id="@+id/sp_prod_crs_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_alwaysShowFloatingLabel="true"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_floatingLabelText="@string/lbl_select_sku_group2"
+                        app:ms_multiline="true" />
+
+                    <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                        android:id="@+id/sp_prod_item_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_alwaysShowFloatingLabel="true"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_floatingLabelText="@string/lbl_item_description"
+                        app:ms_multiline="true" />
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tv_cust_quantity"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2">
+
+                            <EditText
+                                android:id="@+id/edit_cust_quantity"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="top|left"
+                                android:hint="@string/lbl_quantity"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:maxLines="6"
+                                android:overScrollMode="always"
+                                android:scrollHorizontally="false"
+                                android:scrollbarStyle="insideInset"
+                                android:scrollbars="vertical" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="2"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <com.arteriatech.ss.msecsales.rspl.ui.CustomAutoComplete
+                                android:id="@+id/autUOM"
+                                style="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginStart="4dp"
+                                android:cursorVisible="false"
+                                android:focusable="false"
+                                android:imeOptions="actionSearch"
+                                android:inputType="textAutoComplete|textAutoCorrect"
+                                android:textColor="@color/BLACK" />
+
+                            <View
+                                android:id="@+id/line2"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@color/shadow_start" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tv_cust_batch_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/edit_cust_batch_number"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top|left"
+                            android:hint="@string/lbl_batch"
+                            android:inputType="text"
+                            android:maxLength="10"
+                            android:maxLines="6"
+                            android:overScrollMode="always"
+                            android:scrollHorizontally="false"
+                            android:scrollbarStyle="insideInset"
+                            android:scrollbars="vertical" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/txt_dateHint"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="top|left"
+                        android:overScrollMode="always"
+                        android:scrollHorizontally="false"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:text="@string/lbl_MFD"
+                        android:textColor="@color/primaryLightColor"
+                        android:textSize="12dp"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tv_cust_mfd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/edit_tv_cust_mfdr"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top|left"
+                            android:hint="@string/lbl_MFD"
+                            android:overScrollMode="always"
+                            android:scrollHorizontally="false"
+                            android:scrollbarStyle="insideInset"
+                            android:scrollbars="vertical"
+                            android:textIsSelectable="false"
+                            android:textSize="16dp" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="1.6dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/shadow_start" />
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tiRemarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="16dp">
+
+                    <EditText
+                        android:id="@+id/edit_cust_remarks"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top|left"
+                        android:hint="@string/lbl_remarks_mandatory"
+                        android:inputType="textMultiLine"
+                        android:maxLength="100"
+                        android:maxLines="3"
+                        android:overScrollMode="always"
+                        android:scrollHorizontally="false"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_four_dip"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/btn_take_pic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/padding_five_dip"
+                        android:paddingLeft="@dimen/padding_fifteen_dip"
+                        android:paddingRight="@dimen/padding_fifteen_dip"
+                        android:text="@string/btn_take_a_picture" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivThumbnailPhoto"
+
+                    android:layout_width="100dp"
+                    android:layout_height="300dp"
+                    android:adjustViewBounds="true"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+        <android.inputmethodservice.KeyboardView
+            android:id="@+id/keyboard_custom_invoice_sel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:keyPreviewLayout="@layout/preview"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+</LinearLayout>

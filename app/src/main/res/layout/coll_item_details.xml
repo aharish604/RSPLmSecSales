@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/WHITE"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/UtilsItemSpacing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_coll_status"
+                android:layout_width="@dimen/so_list_delv_image"
+                android:layout_height="@dimen/so_list_delv_image"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_account_balance_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvBillNo"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="@dimen/padding_normal_16"
+                android:layout_marginRight="8dp"
+                android:gravity="start"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/iv_coll_status"
+                app:layout_constraintRight_toLeftOf="@+id/tvBillDate" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.70" />
+
+            <TextView
+                android:id="@+id/tvBillDate"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="2dp"
+                android:gravity="right"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_normal_4"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_amount_text"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="@dimen/so_list_delv_image"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="-"
+                android:visibility="invisible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_normal_16"
+                android:layout_marginRight="8dp"
+                android:gravity="start"
+                android:text="@string/lbl_amt"
+                app:layout_constraintLeft_toRightOf="@+id/tv_amount_text"
+                app:layout_constraintRight_toLeftOf="@+id/tvInvAmt" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.70" />
+
+            <TextView
+                android:id="@+id/tvInvAmt"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:gravity="right"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_normal_4"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_paid_text"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="@dimen/so_list_delv_image"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="-"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_normal_16"
+                android:layout_marginRight="8dp"
+                android:gravity="start"
+                android:text="@string/lbl_paid_amt"
+                app:layout_constraintLeft_toRightOf="@+id/tv_paid_text"
+                app:layout_constraintRight_toLeftOf="@+id/tv_coll_det_paid_amt_ex" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.70" />
+
+            <TextView
+                android:id="@+id/tv_coll_det_paid_amt_ex"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:gravity="right"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_normal_4"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_paiable_text"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="@dimen/so_list_delv_image"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="="
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_normal_16"
+                android:layout_marginRight="8dp"
+                android:gravity="start"
+                android:text="@string/lbl_payable_amt"
+                app:layout_constraintLeft_toRightOf="@+id/tv_paiable_text"
+                app:layout_constraintRight_toLeftOf="@+id/tv_coll_det_payable" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.70" />
+
+            <TextView
+                android:id="@+id/tv_coll_det_payable"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:gravity="right"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline6"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_normal_4"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_discount_text"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="@dimen/so_list_delv_image"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="-"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDiscountPer"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_normal_16"
+                android:layout_marginRight="8dp"
+                android:gravity="start"
+                android:text="@string/lbl_paiable_discount"
+                app:layout_constraintLeft_toRightOf="@+id/tv_discount_text"
+                app:layout_constraintRight_toLeftOf="@+id/tv_coll_det_perAmt" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.70" />
+
+            <TextView
+                android:id="@+id/tv_coll_det_perAmt"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:gravity="right"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline7"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_normal_4"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_net_paiable_text"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="@dimen/so_list_delv_image"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="="
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_normal_16"
+                android:layout_marginRight="8dp"
+                android:gravity="start"
+                android:text="@string/lbl_net_payable_amt"
+                app:layout_constraintLeft_toRightOf="@+id/tv_net_paiable_text"
+                app:layout_constraintRight_toLeftOf="@+id/tv_coll_det_net_payable" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.70" />
+
+            <TextView
+                android:id="@+id/tv_coll_det_net_payable"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:gravity="right"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline8"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_normal_4"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_coll_text"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="@dimen/so_list_delv_image"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="-"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_normal_16"
+                android:layout_marginRight="8dp"
+                android:gravity="start"
+                android:text="@string/lbl_amt_coll"
+                app:layout_constraintLeft_toRightOf="@+id/tv_coll_text"
+                app:layout_constraintRight_toLeftOf="@+id/tv_coll_total_paid_amt" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.70" />
+
+            <TextView
+                android:id="@+id/tv_coll_total_paid_amt"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:gravity="right"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_normal_4"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_bal_text"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="@dimen/so_list_delv_image"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="="
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_normal_16"
+                android:layout_marginRight="8dp"
+                android:gravity="start"
+                android:text="@string/lbl_bal_amt"
+                app:layout_constraintLeft_toRightOf="@+id/tv_bal_text"
+                app:layout_constraintRight_toLeftOf="@+id/tv_coll_det_bal_amt_ex" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.70" />
+
+            <TextView
+                android:id="@+id/tv_coll_det_bal_amt_ex"
+                style="@style/UtilsMediumTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:gravity="right"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/single_line_lay" />
+
+
+</LinearLayout>

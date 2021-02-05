@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/appbar_layout" />
+
+
+        <!--<include layout="@layout/ll_retiler_name_no" />-->
+
+        <!--<include layout="@layout/single_line_lay" />-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:id="@+id/nsvContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/padding_normal_16"
+                        android:orientation="vertical">
+
+                        <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                            android:id="@+id/sp_displayType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:ms_alwaysShowFloatingLabel="true"
+                            app:ms_enableFloatingLabel="true"
+                            app:ms_floatingLabelText="@string/lbl_window_display_type"
+                            app:ms_multiline="true" />
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_displaytype"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tv_displayType"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="top|left"
+                            android:overScrollMode="always"
+                            android:scrollHorizontally="false"
+                            android:scrollbarStyle="insideInset"
+                            android:scrollbars="vertical"
+                            android:text="@string/lbl_window_display_type"
+                            android:textColor="@color/primaryLightColor"
+                            android:textSize="12dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/t1_displayType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp">
+                            <TextView
+                                android:id="@+id/tv_displytype"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="top|left"
+                                android:overScrollMode="always"
+                                android:scrollHorizontally="false"
+                                android:scrollbarStyle="insideInset"
+                                android:scrollbars="vertical"
+                                android:text="ss"
+                                android:textIsSelectable="false"
+                                android:textSize="16dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                            <View
+                                android:id="@+id/line2"
+                                android:layout_width="match_parent"
+                                android:layout_height="1.6dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/shadow_start" />
+                        </LinearLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tiOthersType"
+
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/edit_Others"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="top|left"
+                                android:hint="@string/lbl_other_window_disp"
+                                android:inputType="textMultiLine"
+                                android:maxLength="35"
+                                android:maxLines="3"
+                                android:overScrollMode="always"
+                                android:scrollHorizontally="false"
+                                android:scrollbarStyle="insideInset"
+                                android:scrollbars="vertical" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/txt_otherWindow"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:gravity="top|left"
+                                android:overScrollMode="always"
+                                android:scrollHorizontally="false"
+                                android:scrollbarStyle="insideInset"
+                                android:scrollbars="vertical"
+                                android:text="@string/lbl_other_window_disp"
+                                android:textColor="@color/primaryLightColor"
+                                android:textSize="12dp" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tv_other_window"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp">
+
+                                <TextView
+                                    android:id="@+id/ed_otherWindow"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="top|left"
+                                    android:overScrollMode="always"
+                                    android:scrollHorizontally="false"
+                                    android:scrollbarStyle="insideInset"
+                                    android:scrollbars="vertical"
+                                    android:text="ERTRE"
+                                    android:textIsSelectable="false"
+                                    android:textSize="16dp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <View
+                                android:id="@+id/lineOther"
+                                android:layout_width="match_parent"
+                                android:layout_height="1.6dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/shadow_start" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/txt_dateHint"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="top|left"
+                            android:overScrollMode="always"
+                            android:scrollHorizontally="false"
+                            android:scrollbarStyle="insideInset"
+                            android:scrollbars="vertical"
+                            android:text="@string/lbl_promocode"
+                            android:textColor="@color/primaryLightColor"
+                            android:textSize="12dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tv_promocode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:id="@+id/ed_promocode"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="top|left"
+                                android:overScrollMode="always"
+                                android:scrollHorizontally="false"
+                                android:scrollbarStyle="insideInset"
+                                android:scrollbars="vertical"
+                                android:text="ERTRE"
+                                android:textIsSelectable="false"
+                                android:textSize="16dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <View
+                            android:id="@+id/line"
+                            android:layout_width="match_parent"
+                            android:layout_height="1.6dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/shadow_start" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textfield.TextInputLayout
+
+                                    android:id="@+id/tilength"
+                                    android:layout_width="70dp"
+                                    android:layout_height="wrap_content">
+
+                                    <EditText
+                                        android:id="@+id/edit_window_size_l"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="top|left"
+                                        android:hint="@string/lbl_length"
+                                        android:inputType="textMultiLine"
+                                        android:maxLength="3"
+                                        android:maxLines="3"
+                                        android:overScrollMode="always"
+                                        android:scrollHorizontally="false"
+                                        android:scrollbarStyle="insideInset"
+                                        android:scrollbars="vertical" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_window_size_l"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="10dp"
+                                        android:gravity="top|left"
+                                        android:overScrollMode="always"
+                                        android:scrollHorizontally="false"
+                                        android:scrollbarStyle="insideInset"
+                                        android:scrollbars="vertical"
+                                        android:text="@string/lbl_length"
+                                        android:textColor="@color/primaryLightColor"
+                                        android:textSize="12dp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="3dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="10dp">
+                                        <TextView
+                                            android:id="@+id/tv_window_size_l"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="top|left"
+                                            android:overScrollMode="always"
+                                            android:scrollHorizontally="false"
+                                            android:scrollbarStyle="insideInset"
+                                            android:scrollbars="vertical"
+                                            android:text="ss"
+                                            android:textIsSelectable="false"
+                                            android:textSize="16dp" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.6dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginRight="5dp"
+                                        android:background="@color/shadow_start" />
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tiwidth"
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <EditText
+                                        android:id="@+id/edit_window_size_b"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="top|left"
+                                        android:hint="@string/lbl_widht"
+                                        android:inputType="textMultiLine"
+                                        android:maxLength="3"
+                                        android:maxLines="3"
+                                        android:overScrollMode="always"
+                                        android:scrollHorizontally="false"
+                                        android:scrollbarStyle="insideInset"
+                                        android:scrollbars="vertical" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_window_size_b"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="10dp"
+                                        android:gravity="top|left"
+                                        android:overScrollMode="always"
+                                        android:scrollHorizontally="false"
+                                        android:scrollbarStyle="insideInset"
+                                        android:scrollbars="vertical"
+                                        android:text="@string/lbl_breadth"
+                                        android:textColor="@color/primaryLightColor"
+                                        android:textSize="12dp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="3dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="10dp">
+                                        <TextView
+                                            android:id="@+id/tv_window_size_b"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="top|left"
+                                            android:overScrollMode="always"
+                                            android:scrollHorizontally="false"
+                                            android:scrollbarStyle="insideInset"
+                                            android:scrollbars="vertical"
+                                            android:text="ss"
+                                            android:textIsSelectable="false"
+                                            android:textSize="16dp" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.6dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginRight="5dp"
+                                        android:background="@color/shadow_start" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tiheight"
+                                    android:layout_width="65dp"
+                                    android:layout_height="wrap_content">
+
+                                    <EditText
+                                        android:id="@+id/edit_window_size_h"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="top|left"
+                                        android:hint="@string/lbl_height"
+                                        android:inputType="textMultiLine"
+                                        android:maxLength="3"
+                                        android:maxLines="3"
+                                        android:overScrollMode="always"
+                                        android:scrollHorizontally="false"
+                                        android:scrollbarStyle="insideInset"
+                                        android:scrollbars="vertical" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_window_size_h"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="10dp"
+                                        android:gravity="top|left"
+                                        android:overScrollMode="always"
+                                        android:scrollHorizontally="false"
+                                        android:scrollbarStyle="insideInset"
+                                        android:scrollbars="vertical"
+                                        android:text="@string/lbl_height"
+                                        android:textColor="@color/primaryLightColor"
+                                        android:textSize="12dp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="3dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="10dp">
+                                        <TextView
+                                            android:id="@+id/tv_window_size_h"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="top|left"
+                                            android:overScrollMode="always"
+                                            android:scrollHorizontally="false"
+                                            android:scrollbarStyle="insideInset"
+                                            android:scrollbars="vertical"
+                                            android:text="ss"
+                                            android:textIsSelectable="false"
+                                            android:textSize="16dp" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.6dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginRight="5dp"
+                                        android:background="@color/shadow_start" />
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                            android:id="@+id/sp_window_size_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:ms_alwaysShowFloatingLabel="true"
+                            app:ms_enableFloatingLabel="true"
+                            app:ms_floatingLabelText="@string/lbl_window_size_type"
+                            app:ms_multiline="true" />
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_sizetype"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:gravity="top|left"
+                                android:overScrollMode="always"
+                                android:scrollHorizontally="false"
+                                android:scrollbarStyle="insideInset"
+                                android:scrollbars="vertical"
+                                android:text="@string/lbl_window_size_type"
+                                android:textColor="@color/primaryLightColor"
+                                android:textSize="12dp" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/ti_sizeType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp">
+                                <TextView
+                                    android:id="@+id/tv_sizetype"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="top|left"
+                                    android:overScrollMode="always"
+                                    android:scrollHorizontally="false"
+                                    android:scrollbarStyle="insideInset"
+                                    android:scrollbars="vertical"
+                                    android:text="ss"
+                                    android:textIsSelectable="false"
+                                    android:textSize="16dp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1.6dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/shadow_start" />
+                        </LinearLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tiremarks"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/edit_remarks"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="top|left"
+                                android:hint="@string/lbl_remarks"
+                                android:inputType="textMultiLine"
+                                android:maxLength="100"
+                                android:maxLines="3"
+                                android:overScrollMode="always"
+                                android:scrollHorizontally="false"
+                                android:scrollbarStyle="insideInset"
+                                android:scrollbars="vertical" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_remarks"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:gravity="top|left"
+                                android:overScrollMode="always"
+                                android:scrollHorizontally="false"
+                                android:scrollbarStyle="insideInset"
+                                android:scrollbars="vertical"
+                                android:text="@string/lbl_merchandising_remarks"
+                                android:textColor="@color/primaryLightColor"
+                                android:textSize="12dp" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp">
+                                <TextView
+                                    android:id="@+id/tv_Remarks"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="top|left"
+                                    android:overScrollMode="always"
+                                    android:scrollHorizontally="false"
+                                    android:scrollbarStyle="insideInset"
+                                    android:scrollbars="vertical"
+                                    android:text="ss"
+                                    android:textIsSelectable="false"
+                                    android:textSize="16dp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1.6dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/shadow_start" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/nsvContainer"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tabLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#0253cc"
+                            app:tabGravity="fill"
+                            app:tabIndicatorColor="@color/WHITE"
+                            app:tabMode="fixed"
+                            app:tabSelectedTextColor="@color/WHITE"
+                            app:tabTextColor="@color/WHITE"></com.google.android.material.tabs.TabLayout>
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/viewpager"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:background="@android:color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+
+            <android.inputmethodservice.KeyboardView
+                android:id="@+id/keyboard_custom_invoice_sel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:keyPreviewLayout="@layout/preview"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

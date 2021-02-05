@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardBackgroundColor">
+
+    <include layout="@layout/appbar_layout" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+
+            <include layout="@layout/ll_retiler_name_no" />
+
+            <include layout="@layout/single_line_lay" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ScrollView
+                    android:id="@+id/nsvContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/keyboard_custom_invoice_sel">
+
+                    <LinearLayout
+                        style="@style/UtilsItemSpacing"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                            android:id="@+id/spCompetitorName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/padding_normal_16"
+                            app:ms_alwaysShowFloatingLabel="true"
+                            app:ms_enableFloatingLabel="true"
+                            app:ms_floatingLabelText="@string/lbl_competitor_mandatory"
+                            app:ms_multiline="false" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tiProduct"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/MyEditTextTheme">
+
+                            <EditText
+                                android:id="@+id/etProductName"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/lbl_product_mandatory"
+                                android:maxLength="40"
+                                android:singleLine="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                            android:id="@+id/spSchemeLaunched"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/padding_normal_16"
+                            app:ms_alwaysShowFloatingLabel="true"
+                            app:ms_enableFloatingLabel="true"
+                            app:ms_floatingLabelText="@string/lbl_scheme_launched"
+                            app:ms_multiline="false" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tiSchemeName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/MyEditTextTheme"
+                            android:visibility="gone">
+
+                            <EditText
+                                android:id="@+id/etSchemeName"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/lbl_scheme_name_mandatory"
+                                android:maxLength="150"
+                                android:singleLine="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tiMRP"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/MyEditTextTheme">
+
+                            <EditText
+                                android:id="@+id/etMRM"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/lbl_mrp_mandatory"
+                                android:singleLine="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tiRetailerMargin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/MyEditTextTheme">
+
+                            <EditText
+                                android:id="@+id/etRetailerMargin"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/lbl_margin_mandatory"
+                                android:inputType="numberDecimal"
+                                android:singleLine="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tiRetailerLandingPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/MyEditTextTheme">
+
+                            <EditText
+                                android:id="@+id/etRetailerLandingPrice"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/lbl_ret_landing_offer"
+                                android:singleLine="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tiWholesalerLandingPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/MyEditTextTheme">
+
+                            <EditText
+                                android:id="@+id/etWholesalerLandingPrice"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/lbl_whole_landing_offer"
+                                android:singleLine="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tiConsumerOffer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/MyEditTextTheme">
+
+                            <EditText
+                                android:id="@+id/etConsumerOffer"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:maxLength="100"
+                                android:hint="@string/lbl_consumer_offer"
+                                android:singleLine="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tiTradeOffer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/MyEditTextTheme">
+
+                            <EditText
+                                android:id="@+id/etTradeOffer"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:maxLength="100"
+                                android:hint="@string/lbl_trade_offer"
+                                android:singleLine="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tiShelfLife"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/MyEditTextTheme">
+
+                            <EditText
+                                android:id="@+id/etShelfLife"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/lbl_shelf_lif"
+                                android:maxLength="4"
+                                android:inputType="number"
+                                android:singleLine="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tiRemarks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/MyEditTextTheme">
+
+                            <EditText
+                                android:id="@+id/etRemarks"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/lbl_remarks"
+                                android:maxLength="150"
+                                android:singleLine="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+                </ScrollView>
+
+                <android.inputmethodservice.KeyboardView
+                    android:id="@+id/keyboard_custom_invoice_sel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:keyPreviewLayout="@layout/preview"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardBackgroundColor">
+
+    <include layout="@layout/appbar_layout" />
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nsvContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    style="@style/UtilsItemSpacing"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        style="@style/Header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="0dp"
+                        android:paddingTop="@dimen/padding_normal_16"
+                        android:text="@string/lbl_person_details" />
+
+                    <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                        android:id="@+id/spRetailerType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_alwaysShowFloatingLabel="true"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_floatingLabelText="@string/retailer_type"
+                        app:ms_multiline="false" />
+                   <!-- <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                        android:id="@+id/spDistributor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_alwaysShowFloatingLabel="true"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_floatingLabelText="@string/lbl_distributor"
+                        app:ms_multiline="false" />-->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiOutletName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etOutletName"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/lbl_outlet_name_mandatory"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiOwnerName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etOwnerName"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/lbl_owner_name_mandatory"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Switch
+                        android:id="@+id/switchIskeyCP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_is_key_cp"
+                        android:textColor="@color/BLACK"
+                        android:paddingTop="@dimen/padding_normal_16"
+                        android:paddingBottom="@dimen/padding_normal_16"
+                        android:textSize="@dimen/util_sub_title_sp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiDOB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etDOB"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:cursorVisible="false"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="@string/lbl_dob"
+                            android:inputType="date"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiAnniversary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etAnniversary"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:cursorVisible="false"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="@string/lbl_ret_annversiry"
+                            android:inputType="date"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiIDOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etIDOne"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLength="12"
+                            android:hint="@string/lbl_id_one"
+                            android:inputType="number"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiIDTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etIDTwo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/lbl_id_two"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiBussIDOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etBussIDOne"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textCapCharacters"
+                            android:hint="@string/lbl_buss_id_one"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiBussIDTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etBussIDTwo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/lbl_buss_id_two"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiCPUID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etCPUID"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/lbl_cp_uid"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                     <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                        android:id="@+id/spBeatName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_alwaysShowFloatingLabel="true"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_floatingLabelText="@string/lbl_beat_name_mandatory"
+                        app:ms_multiline="false" />
+
+                     <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                          android:id="@+id/spDistributor"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          app:ms_alwaysShowFloatingLabel="true"
+                          app:ms_enableFloatingLabel="true"
+                          app:ms_floatingLabelText="@string/lbl_distributor_mandatory"
+                          app:ms_multiline="false" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiDistName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etDistNameVal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:cursorVisible="false"
+                            android:editable="false"
+                            android:hint="@string/lbl_distributor_name"
+                            android:focusable="false"
+                            android:inputType="date"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <TextView
+                        style="@style/Header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="0dp"
+                        android:paddingTop="@dimen/padding_normal_16"
+                        android:text="@string/lbl_address_details" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                    <EditText
+                        android:id="@+id/etAddress"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lbl_address_man"
+                        android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiAddressTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etAddressTwo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/lbl_address_two"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiAddressThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etAddressThree"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/lbl_address_three"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiAddressFour"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etAddressFour"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/lbl_address_four"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiLandMark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etLandMark"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/lbl_landmark"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                        android:id="@+id/spRetCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_alwaysShowFloatingLabel="true"
+                        app:ms_enableFloatingLabel="true"
+                        android:clickable="false"
+                        app:ms_floatingLabelText="@string/lbl_country"
+                        app:ms_multiline="false" />
+
+                    <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                        android:id="@+id/spRetState"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_alwaysShowFloatingLabel="true"
+                        app:ms_enableFloatingLabel="true"
+                        android:clickable="false"
+                        app:ms_floatingLabelText="@string/lbl_state"
+                        app:ms_multiline="false" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiDistrict"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                    <EditText
+                        android:id="@+id/etDistrict"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lbl_district_mandatory"
+                        android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etCity"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/lbl_city_mandatory"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiTown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etTown"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/lbl_town_mandatory"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiPinCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etPinCode"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:hint="@string/lbl_pin_code_mandatory"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|center_vertical"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/iv_location"
+                            android:layout_width="@dimen/so_list_delv_image"
+                            android:layout_height="@dimen/so_list_delv_image"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="8dp"
+                            app:srcCompat="@drawable/ic_add_location_black_24dp"
+                            android:tint="@color/secondaryColor"/>
+
+                        <TextView
+                            android:id="@+id/tvLocationVal"
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginLeft="@dimen/padding_normal_8"
+                            android:text="" />
+                        <Button
+                            android:id="@+id/ivLocationCapture"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_capture"
+                            android:visibility="gone"
+                            android:layout_marginLeft="0dp"
+                            android:gravity="center|center_vertical"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/secondaryColor"
+                            android:textColor="@color/WHITE"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+                    <TextView
+                        style="@style/Header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="0dp"
+                        android:paddingLeft="0dp"
+                        android:paddingTop="@dimen/padding_normal_16"
+                        android:text="@string/lbl_contact_details" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etMobile"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:hint="@string/lbl_mobile_no_mandatory"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiMobileTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etMobileTwo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:hint="@string/lbl_mobile_no_two"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiTelphone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etTelphone"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="16"
+                            android:hint="@string/lbl_tel_no"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiFax"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etFax"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:hint="@string/lbl_fax_no"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/timailid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etMailID"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/lbl_mail_id"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_sort"
+        android:icon="@drawable/ic_action_sort"
+        android:orderInCategory="100"
+        android:title="@string/db_stk_srt"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/menu_mfd"
+                android:orderInCategory="100"
+                android:title="@string/db_stk_srt_mfd"
+                app:showAsAction="collapseActionView" />
+            <item
+                android:id="@+id/menu_mrp"
+                android:orderInCategory="100"
+                android:title="@string/db_stk_srt_mrp"
+                app:showAsAction="collapseActionView" />
+            <item
+                android:id="@+id/menu_rl_price"
+                android:orderInCategory="100"
+                android:title="@string/db_stk_srt_rlprice"
+                app:showAsAction="collapseActionView" />
+        </menu>
+    </item>
+</menu>

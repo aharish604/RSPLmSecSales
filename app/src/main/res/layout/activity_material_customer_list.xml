@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cardBackgroundColor"
+    tools:context=".customers.CustomerListActivity">
+
+    <include layout="@layout/appbar_layout" />
+
+    <include layout="@layout/filter_display_layout" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view"
+                    style="@style/CardViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginBottom="@dimen/padding_normal_4">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/mainLayout"
+                        style="@style/UtilsItemSpacing"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="4dp"
+                        android:background="@drawable/cardviewborder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/iv_mobile"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:scaleType="fitXY"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_report_problem_black_24dp" />
+                        <TextView
+                            android:id="@+id/tv_RetailerError"
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="0dp"
+                            app:layout_constraintLeft_toLeftOf="@+id/iv_mobile"
+                            app:layout_constraintStart_toStartOf="@+id/guideline1"
+                            android:text="@string/lbl_Not_Retailer_Desc"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintTop_toTopOf="@+id/iv_mobile" />
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.12" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                    android:id="@+id/spBeat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_normal_16"
+                    android:layout_marginRight="@dimen/padding_normal_16"
+                    android:layout_marginTop="@dimen/padding_normal_16"
+                    android:visibility="gone"
+                    app:ms_alwaysShowFloatingLabel="true"
+                    app:ms_enableErrorLabel="false"
+                    app:ms_enableFloatingLabel="true"
+                    app:ms_floatingLabelText="@string/lbl_beat"
+                    app:ms_multiline="false" />
+
+                <!--<LinearLayout
+                    android:id="@+id/llBeatOpening"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <include layout="@layout/beat_opening_summary"/>
+                </LinearLayout>-->
+
+                <TextView
+                    android:id="@+id/tvBeat"
+                    style="@style/UtilsSubHeaderStyles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_normal_16"
+                    android:text="dfadf"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include layout="@layout/no_record_found" />
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

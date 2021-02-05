@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardBackgroundColor"
+    android:orientation="vertical">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <com.arteriatech.ss.msecsales.rspl.ui.fabTnsfmgToolBar.FABToolbarLayout
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="40dp"
+            android:id="@+id/fabtoolbarContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:containerId="@+id/fabtoolbar_container"
+            app:fabId="@+id/fabtoolbar"
+            app:fabToolbarId="@+id/fabtoolbar_toolbar"
+            app:fadeInFraction="0.2"
+            app:hideDuration="200"
+            app:horizontalMargin="30dp"
+            app:showDuration="600"
+            app:verticalMargin="40dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ScrollView
+                        android:id="@+id/nestedScroll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvRetailerCatDetails"
+                                style="@style/CardViewStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/padding_normal_4"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <LinearLayout
+                                        style="@style/UtilsItemSpacing"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            style="@style/UtilsMediumTextStyle"
+                                            android:layout_width="0dp"
+                                            android:layout_weight="1"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="@string/lbl_RetailerCategory" />
+
+                                        <TextView
+                                            style="@style/UtilsMediumTextStyle"
+                                            android:layout_weight="1"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="@string/lbl_Classification" />
+
+                                        <TextView
+                                            style="@style/UtilsMediumTextStyle"
+                                            android:layout_width="0dp"
+                                            android:layout_weight="1"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="@string/lbl_WeeklyOff" />
+
+                                    </LinearLayout>
+                                    <include layout="@layout/single_line_lay" />
+                                    <LinearLayout
+                                        style="@style/UtilsItemSpacing"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/tv_ret_category"
+                                            style="@style/SubItemTextStyle"
+                                            android:layout_weight="1"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/padding_normal_4"
+                                            android:gravity="center" />
+
+                                        <TextView
+                                            android:id="@+id/tv_classification"
+                                            style="@style/SubItemTextStyle"
+                                            android:layout_weight="1"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/padding_normal_4"
+                                            android:gravity="center" />
+
+                                        <TextView
+                                            android:id="@+id/tv_weekly_off"
+                                            style="@style/SubItemTextStyle"
+                                            android:layout_weight="1"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/padding_normal_4"
+                                            android:gravity="center"/>
+
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvRetailerDetails"
+                                style="@style/CardViewStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/padding_normal_4"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/padding_normal_16"
+                                    android:orientation="vertical">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+                                        <ImageView
+                                            android:id="@+id/ivDistName"
+                                            android:layout_width="@dimen/so_list_delv_image"
+                                            android:layout_height="@dimen/so_list_delv_image"
+                                            android:layout_marginLeft="0dp"
+                                            android:layout_marginTop="0dp"
+                                            app:layout_constraintLeft_toLeftOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:srcCompat="@drawable/ic_person_black_24dp"
+                                            android:tint="@color/secondaryColor"/>
+
+                                        <TextView
+                                            android:id="@+id/tvDistName"
+                                            style="@style/UtilsMediumTextStyle"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/lbl_distributor_name"
+                                            android:layout_marginLeft="@dimen/padding_normal_16"
+                                            app:layout_constraintLeft_toRightOf="@+id/ivDistName"
+                                            app:layout_constraintTop_toTopOf="parent"/>
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:id="@+id/ll_owner_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+                                        <ImageView
+                                            android:id="@+id/ivOwnerName"
+                                            android:layout_width="@dimen/so_list_delv_image"
+                                            android:layout_height="@dimen/so_list_delv_image"
+                                            android:layout_marginLeft="0dp"
+                                            android:layout_marginTop="0dp"
+                                            app:layout_constraintLeft_toLeftOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:srcCompat="@drawable/ic_person_outline_black_24dp"
+                                            android:tint="@color/secondaryColor"/>
+
+                                        <TextView
+                                            android:id="@+id/tvOwnerName"
+                                            style="@style/UtilsMediumTextStyle"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=""
+                                            android:layout_marginLeft="@dimen/padding_normal_16"
+                                            app:layout_constraintLeft_toRightOf="@+id/ivOwnerName"
+                                            app:layout_constraintTop_toTopOf="parent"/>
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+                                        <ImageView
+                                            android:id="@+id/ivAddress"
+                                            android:layout_width="@dimen/so_list_delv_image"
+                                            android:layout_height="@dimen/so_list_delv_image"
+                                            android:layout_marginLeft="0dp"
+                                            android:layout_marginTop="8dp"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            android:layout_gravity="top"
+                                            app:layout_constraintTop_toBottomOf="@+id/ivDistName"
+                                            app:srcCompat="@drawable/ic_home_black_24dp"
+                                            android:tint="@color/secondaryColor"/>
+
+                                        <TextView
+                                            android:id="@+id/tvAddress"
+                                            style="@style/UtilsMediumTextStyle"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="@dimen/padding_normal_16"
+                                            android:text=""
+                                            app:layout_constraintRight_toRightOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/ivAddress"
+                                            app:layout_constraintTop_toBottomOf="@+id/tvDistName" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_location_layout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+                                        <ImageView
+                                            android:id="@+id/ivLandmark"
+                                            android:layout_width="@dimen/so_list_delv_image"
+                                            android:layout_height="@dimen/so_list_delv_image"
+                                            android:layout_marginLeft="0dp"
+                                            android:layout_marginTop="8dp"
+                                            app:srcCompat="@drawable/ic_location_city_black_24dp"
+                                            android:tint="@color/secondaryColor"/>
+
+                                        <TextView
+                                            android:id="@+id/tvLandmark"
+                                            style="@style/UtilsMediumTextStyle"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="@dimen/padding_normal_16"
+                                            android:text="textview" />
+
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:id="@+id/ll_tax_status"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+                                        <!--<ImageView
+                                            android:id="@+id/ivGst"
+                                            android:layout_width="@dimen/so_list_delv_image"
+                                            android:layout_height="@dimen/so_list_delv_image"
+                                            android:layout_marginLeft="0dp"
+                                            android:layout_marginTop="8dp"
+                                            app:srcCompat="@drawable/ic_receipt_black_24dp"
+                                            android:tint="@color/secondaryColor"/>-->
+
+                                        <TextView
+                                            android:id="@+id/tvGSTText"
+                                            style="@style/UtilsMediumTextStyle"
+                                            android:layout_width="@dimen/so_list_delv_image"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:layout_marginLeft="0dp"
+                                            android:layout_marginTop="8dp"
+                                            android:text="@string/lbl_gst" />
+                                        <TextView
+                                            android:id="@+id/tvGSTNo"
+                                            style="@style/UtilsMediumTextStyle"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="@dimen/padding_normal_16"
+                                            android:text="textview" />
+                                        <ImageView
+                                            android:id="@+id/ivGSTStatus"
+                                            android:layout_width="@dimen/so_list_delv_image"
+                                            android:layout_height="@dimen/so_list_delv_image"
+                                            android:visibility="gone"
+                                            android:layout_weight="0.4"
+                                            android:layout_marginLeft="0dp"
+                                            android:layout_gravity="right"
+                                            android:layout_marginTop="8dp"
+                                            app:srcCompat="@drawable/ic_done_black_24dp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center|center_vertical"
+                                        android:orientation="horizontal">
+                                        <ImageView
+                                            android:id="@+id/iv_location"
+                                            android:layout_width="@dimen/so_list_delv_image"
+                                            android:layout_height="@dimen/so_list_delv_image"
+                                            android:layout_marginLeft="0dp"
+                                            android:layout_marginTop="8dp"
+                                            app:srcCompat="@drawable/ic_place_black_24dp"
+                                            android:tint="@color/secondaryColor"/>
+
+                                        <TextView
+                                            android:id="@+id/tvLocationVal"
+                                            style="@style/UtilsMediumTextStyle"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="@dimen/padding_normal_16"
+                                            android:text="textview" />
+                                        <Button
+                                            android:id="@+id/ivLocationCapture"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/lbl_capture"
+                                            android:visibility="gone"
+                                            android:layout_marginLeft="0dp"
+                                            android:gravity="center|center_vertical"
+
+
+                                            android:layout_marginTop="8dp"
+                                            android:background="@color/secondaryColor"
+                                            android:textColor="@color/WHITE"
+                                            android:layout_gravity="center"/>
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <!-- <LinearLayout
+                                     style="@style/UtilsItemSpacing"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:orientation="vertical"
+                                     android:paddingTop="0dp">
+
+                                     <LinearLayout
+                                         android:layout_width="match_parent"
+                                         android:layout_height="wrap_content"
+                                         android:orientation="vertical">
+
+                                         <android.support.constraint.ConstraintLayout
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:padding="@dimen/padding_normal_16">
+
+                                             <ImageView
+                                                 android:id="@+id/ivDistName"
+                                                 android:layout_width="@dimen/so_list_delv_image"
+                                                 android:layout_height="@dimen/so_list_delv_image"
+                                                 android:layout_marginLeft="0dp"
+                                                 android:layout_marginTop="0dp"
+                                                 app:layout_constraintLeft_toLeftOf="parent"
+                                                 app:layout_constraintTop_toTopOf="parent"
+                                                 app:srcCompat="@drawable/ic_account_balance_black_24dp" />
+
+                                             <TextView
+                                                 android:id="@+id/tvDistName"
+                                                 style="@style/UtilsMediumTextStyle"
+                                                 android:layout_width="wrap_content"
+                                                 android:layout_height="wrap_content"
+                                                 android:text="@string/lbl_distributor_name"
+                                                 android:layout_marginLeft="@dimen/padding_normal_16"
+                                                 app:layout_constraintLeft_toRightOf="@+id/ivDistName"
+                                                 app:layout_constraintTop_toTopOf="parent"/>
+
+                                             <ImageView
+                                                 android:layout_width="24dp"
+                                                 android:layout_height="24dp"
+                                                 android:layout_marginLeft="4dp"
+                                                 android:layout_marginStart="4dp"
+                                                 android:layout_marginTop="0dp"
+                                                 android:visibility="gone"
+                                                 app:layout_constraintLeft_toLeftOf="parent"
+                                                 app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                                             <ImageView
+                                                 android:id="@+id/ivAddress"
+                                                 android:layout_width="@dimen/so_list_delv_image"
+                                                 android:layout_height="@dimen/so_list_delv_image"
+                                                 android:layout_marginLeft="0dp"
+                                                 android:layout_marginTop="8dp"
+                                                 app:layout_constraintStart_toStartOf="parent"
+                                                 app:layout_constraintTop_toBottomOf="@+id/ivDistName"
+                                                 app:srcCompat="@drawable/ic_people_black_24dp" />
+
+                                             <TextView
+                                                 android:id="@+id/tvAddress"
+                                                 style="@style/SubItemTextStyle"
+                                                 android:layout_width="0dp"
+                                                 android:layout_height="wrap_content"
+                                                 android:layout_marginStart="8dp"
+                                                 android:layout_marginTop="8dp"
+                                                 android:text="textview"
+                                                 app:layout_constraintRight_toRightOf="parent"
+                                                 app:layout_constraintStart_toEndOf="@+id/ivAddress"
+                                                 app:layout_constraintTop_toBottomOf="@+id/tvDistName" />
+
+                                             <ImageView
+                                                 android:id="@+id/ivLandMark"
+                                                 android:layout_width="@dimen/so_list_delv_image"
+                                                 android:layout_height="@dimen/so_list_delv_image"
+                                                 android:layout_marginLeft="0dp"
+                                                 android:layout_marginTop="8dp"
+                                                 app:layout_constraintStart_toStartOf="parent"
+                                                 app:layout_constraintTop_toBottomOf="@+id/ivAddress"
+                                                 app:srcCompat="@drawable/ic_people_black_24dp" />
+
+                                             <TextView
+                                                 android:id="@+id/tvLandMark"
+                                                 style="@style/SubItemTextStyle"
+                                                 android:layout_width="0dp"
+                                                 android:layout_height="wrap_content"
+                                                 android:layout_marginBottom="8dp"
+                                                 android:layout_marginLeft="@dimen/padding_normal_16"
+                                                 android:text="textview"
+                                                 android:layout_marginTop="8dp"
+                                                 app:layout_constraintBottom_toBottomOf="parent"
+                                                 app:layout_constraintHorizontal_bias="0.0"
+                                                 app:layout_constraintLeft_toLeftOf="parent"
+                                                 app:layout_constraintRight_toRightOf="parent"
+                                                 app:layout_constraintStart_toEndOf="@+id/ivLandMark"
+                                                 app:layout_constraintTop_toBottomOf="@+id/tvAddress" />
+
+
+                                         </android.support.constraint.ConstraintLayout>
+                                     </LinearLayout>
+
+
+
+                                 </LinearLayout>-->
+                            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <!--<LinearLayout
+                        android:id="@+id/ll_apr_rej"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:tint="@color/WHITE"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/primaryColor"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:id="@+id/tvReject"
+                            style="@style/SelectableItemBackground"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/Header"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/reject"
+                                android:textColor="@color/actionBarMenuIconColor" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/actionBarMenuIconColor" />
+
+                        <LinearLayout
+                            android:id="@+id/tvApprove"
+                            style="@style/SelectableItemBackground"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/Header"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/lbl_approve"
+                                android:textColor="@color/actionBarMenuIconColor" />
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>-->
+                </RelativeLayout>
+
+
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@id/fabtoolbar_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@id/fabtoolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_perm_phone_msg_black_24dp"
+                    android:tint="@color/WHITE"
+                    app:backgroundTint="@color/primaryColor"
+                    app:borderWidth="0dp"
+                    app:fabSize="normal" />
+            </RelativeLayout>
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@id/fabtoolbar_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="70dp"
+
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:id="@+id/llCall"
+                        style="@style/SelectableItemBackground"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/call"
+                            android:layout_width="@dimen/nav_item_image_right"
+                            android:layout_height="@dimen/nav_item_image_right"
+                            android:layout_weight="1"
+                            android:contentDescription="@null"
+                            android:tint="@color/WHITE"
+                            app:srcCompat="@drawable/ic_call_black_24dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/actionBarMenuIconColor" />
+                    <LinearLayout
+                        android:id="@+id/llMessage"
+                        style="@style/SelectableItemBackground"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/sms"
+                            android:layout_width="@dimen/nav_item_image_right"
+                            android:layout_height="@dimen/nav_item_image_right"
+                            android:layout_weight="1"
+                            android:contentDescription="@null"
+                            android:tint="@color/WHITE"
+                            app:srcCompat="@drawable/ic_message_black_24dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/actionBarMenuIconColor" />
+                    <LinearLayout
+                        android:id="@+id/llMail"
+                        style="@style/SelectableItemBackground"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/mail"
+                            android:layout_width="@dimen/nav_item_image_right"
+                            android:layout_height="@dimen/nav_item_image_right"
+                            android:layout_weight="1"
+                            android:contentDescription="@null"
+                            android:tint="@color/WHITE"
+                            app:srcCompat="@drawable/ic_mail_outline_black_24dp"
+
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/actionBarMenuIconColor" />
+                    <LinearLayout
+                        android:id="@+id/llWhatsApp"
+                        style="@style/SelectableItemBackground"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/whats_app"
+                            android:layout_width="@dimen/nav_item_image_right"
+                            android:layout_height="@dimen/nav_item_image_right"
+                            android:layout_weight="1"
+                            android:contentDescription="@null"
+                            android:src="@drawable/vectorpaint"
+                            android:tint="@color/WHITE" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="1dp"
+                     android:background="@color/actionBarMenuIconColor" />
+             <LinearLayout
+                 android:id="@+id/ll_apr_rej_fab"
+                 android:layout_width="match_parent"
+                 android:layout_height="45dp"
+                 android:tint="@color/WHITE"
+                 android:orientation="horizontal">
+                 <LinearLayout
+                     android:id="@+id/tvRejectFab"
+                     style="@style/SelectableItemBackground"
+                     android:layout_width="40dp"
+                     android:layout_height="match_parent"
+                     android:layout_gravity="center"
+                     android:layout_weight="1"
+                     android:gravity="center"
+                     android:orientation="vertical">
+
+                     <TextView
+                         style="@style/Header"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:gravity="center"
+                         android:text="@string/reject"
+                         android:textColor="@color/actionBarMenuIconColor" />
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_width="1dp"
+                     android:layout_height="match_parent"
+                     android:background="@color/actionBarMenuIconColor" />
+
+                 <LinearLayout
+                     android:id="@+id/tvApproveFab"
+                     style="@style/SelectableItemBackground"
+                     android:layout_width="40dp"
+                     android:layout_height="match_parent"
+                     android:layout_gravity="center"
+                     android:layout_weight="1"
+                     android:gravity="center"
+                     android:orientation="vertical">
+
+                     <TextView
+                         style="@style/Header"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:gravity="center"
+                         android:text="@string/lbl_approve"
+                         android:textColor="@color/actionBarMenuIconColor" />
+                 </LinearLayout>
+
+
+
+             </LinearLayout>-->
+            </LinearLayout>
+        </com.arteriatech.ss.msecsales.rspl.ui.fabTnsfmgToolBar.FABToolbarLayout>
+        <LinearLayout
+            android:id="@+id/ll_apr_rej"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/fabtoolbarContainer"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/actionBarMenuIconColor" />
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:tint="@color/WHITE"
+
+                android:background="@color/primaryColor"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/tvReject"
+                    style="@style/SelectableItemBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/reject"
+                        android:textColor="@color/actionBarMenuIconColor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/actionBarMenuIconColor" />
+
+                <LinearLayout
+                    android:id="@+id/tvApprove"
+                    style="@style/SelectableItemBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/lbl_approve"
+                        android:textColor="@color/actionBarMenuIconColor" />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

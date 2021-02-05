@@ -1,0 +1,115 @@
+<resources>
+    <!--attendance-->
+    <style name="CstmToggleButtonWhiteBoldText" parent="@android:style/Widget">
+        <item name="android:textColor">?attr/colorControlNormal</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="CstmToggleButtonPrimaryNormalText" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="UtilsSubItem" parent="@style/SelectableItemBackground">
+        <item name="android:paddingTop">@dimen/padding_normal_8</item>
+        <item name="android:paddingBottom">@dimen/padding_normal_16</item>
+        <item name="android:paddingRight">@dimen/padding_normal_16</item>
+        <item name="android:paddingLeft">@dimen/padding_normal_8</item>
+    </style>
+
+    <style name="ProgressDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/secondaryDarkColor</item>
+        <item name="android:windowBackground">@color/dialogBoxBackgroundColor</item>
+        <item name="windowFixedWidthMajor">90%</item>
+        <item name="windowFixedWidthMinor">90%</item>
+    </style>
+
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabMaxWidth">@dimen/tab_max_width</item>
+        <item name="tabIndicatorColor">@color/WHITE</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabBackground">@color/colorPrimary</item>
+        <item name="tabTextAppearance">@style/MyCustomTabTextAppearance</item>
+        <item name="tabSelectedTextColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="UtilsSmallTextStyle" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">@dimen/util_small_text_sp</item>
+        <item name="android:textColor">@color/secondaryTextColor</item>
+    </style>
+
+    <style name="SubItemTextStyle" parent="@android:style/TextAppearance.Small">
+        <item name="android:textSize">@dimen/util_normal_text_sp</item>
+        <item name="android:lineSpacingExtra">@dimen/util_textview_line_spacing</item>
+    </style>
+
+    <style name="DialogTheme" parent="@android:style/Theme.Panel">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
+        <item name="colorAccent">@color/WHITE</item>
+    </style>
+
+    <style name="UtilsTabLayout" parent="Widget.Design.TabLayout">
+        <!-- <item name="tabMaxWidth">@dimen/tab_max_width</item>-->
+        <item name="tabIndicatorColor">@color/secondaryColor</item>
+        <!-- <item name="tabIndicatorHeight">4dp</item>
+         <item name="tabPaddingStart">6dp</item>
+         <item name="tabPaddingEnd">6dp</item>-->
+        <item name="tabBackground">@color/primaryLightColor</item>
+        <item name="tabTextAppearance">@style/UtilsTabTextAppearance</item>
+        <!-- <item name="tabSelectedTextColor">@color/range</item>-->
+    </style>
+    <style name="UtilsTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <!-- <item name="android:textSize">12sp</item>-->
+        <!--<item name="android:textColor">@color/primaryTextColor</item>-->
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="UtilsSubHeader" parent="@style/SelectableItemBackground">
+        <item name="android:paddingTop">@dimen/padding_normal_8</item>
+        <item name="android:paddingBottom">@dimen/padding_normal_4</item>
+        <item name="android:paddingRight">@dimen/padding_normal_8</item>
+        <item name="android:paddingLeft">@dimen/padding_normal_8</item>
+    </style>
+
+    <style name="CardViewStyleNoTopMargin">
+        <item name="android:layout_marginLeft">@dimen/padding_normal_8</item>
+        <item name="android:layout_marginRight">@dimen/padding_normal_8</item>
+        <!-- <item name="android:layout_marginTop">@dimen/padding_normal_8</item>-->
+        <item name="android:layout_marginBottom">@dimen/padding_normal_8</item>
+    </style>
+    <style name="MediumHeaderTextStyle" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">@dimen/util_sub_title_sp</item>
+        <item name="android:lineSpacingExtra">@dimen/util_textview_line_spacing</item>
+        <!--<item name="android:textColor">@color/secondaryTextColor</item>-->
+    </style>
+
+    <style name="UtilsSubHeaderNotTop" parent="@style/SelectableItemBackground">
+
+        <item name="android:paddingBottom">@dimen/padding_normal_4</item>
+        <item name="android:paddingRight">@dimen/padding_normal_8</item>
+        <item name="android:paddingLeft">@dimen/padding_normal_8</item>
+    </style>
+
+    <style name="MediumTextStyleCard" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">@dimen/util_normal_text_sp</item>
+    </style>
+    <style name="CustomProgressBarHorizontal" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/custom_progress_bar_horizontal</item>
+        <item name="android:minHeight">20dip</item>
+        <item name="android:maxHeight">20dip</item>
+    </style>
+
+    <!-- Android Splash Screen Example -->
+    <style name="AppTheme.Launcher" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+</resources>

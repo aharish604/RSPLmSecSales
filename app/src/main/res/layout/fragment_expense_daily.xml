@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".expense.ExpenseDailyFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_normal_16">
+
+            <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                android:id="@+id/sp_expense_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_normal_4"
+                android:layout_marginTop="@dimen/padding_normal_4"
+                android:layout_weight="1"
+                android:paddingEnd="@dimen/padding_zero_dip"
+                android:paddingLeft="@dimen/padding_three_dip"
+                android:paddingRight="@dimen/padding_three_dip"
+                android:paddingStart="@dimen/padding_zero_dip"
+                android:textSize="@dimen/medium_text"
+                app:ms_alwaysShowFloatingLabel="true"
+                app:ms_enableFloatingLabel="true"
+                app:ms_floatingLabelText="@string/expense_type"
+                app:ms_multiline="false" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_expense_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/MyEditTextTheme">
+
+                <EditText
+                    android:id="@+id/et_expense_date"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="@string/exp_date"
+                    android:inputType="date"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                android:id="@+id/sp_non_beat_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_normal_4"
+                android:layout_marginTop="@dimen/padding_normal_4"
+                android:layout_weight="1"
+                android:paddingEnd="@dimen/padding_zero_dip"
+                android:paddingLeft="@dimen/padding_three_dip"
+                android:paddingRight="@dimen/padding_three_dip"
+                android:paddingStart="@dimen/padding_zero_dip"
+                android:textSize="@dimen/medium_text"
+                app:ms_alwaysShowFloatingLabel="true"
+                app:ms_enableFloatingLabel="true"
+                app:ms_floatingLabelText="@string/non_beat_work_type"
+                app:ms_multiline="false" />
+
+            <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                android:id="@+id/sp_beat_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_normal_4"
+                android:layout_marginTop="@dimen/padding_normal_4"
+                android:layout_weight="1"
+                android:paddingEnd="@dimen/padding_zero_dip"
+                android:paddingLeft="@dimen/padding_three_dip"
+                android:paddingRight="@dimen/padding_three_dip"
+                android:paddingStart="@dimen/padding_zero_dip"
+                android:textSize="@dimen/medium_text"
+                app:ms_alwaysShowFloatingLabel="true"
+                app:ms_enableFloatingLabel="true"
+                app:ms_floatingLabelText="@string/non_beat_name"
+                app:ms_multiline="false" />
+
+            <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                android:id="@+id/sp_beat_work"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_normal_4"
+                android:layout_marginTop="@dimen/padding_normal_4"
+                android:layout_weight="1"
+                android:paddingEnd="@dimen/padding_zero_dip"
+                android:paddingLeft="@dimen/padding_three_dip"
+                android:paddingRight="@dimen/padding_three_dip"
+                android:paddingStart="@dimen/padding_zero_dip"
+                android:textSize="@dimen/medium_text"
+                app:ms_alwaysShowFloatingLabel="true"
+                app:ms_enableFloatingLabel="true"
+                app:ms_floatingLabelText="@string/non_beat_work_type"
+                app:ms_multiline="false" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiv_daily_allowance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/MyEditTextTheme">
+
+                <EditText
+                    android:id="@+id/tv_daily_allowance"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="@string/exp_daily_allowance"
+                    android:inputType="date"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_daily_allowance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/MyEditTextTheme">
+
+                <EditText
+                    android:id="@+id/et_daily_allowance"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/exp_daily_allowance"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                android:id="@+id/sp_modeof_con"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/padding_normal_4"
+                android:layout_marginTop="@dimen/padding_normal_4"
+                android:layout_weight="1"
+                android:paddingEnd="@dimen/padding_zero_dip"
+                android:paddingLeft="@dimen/padding_three_dip"
+                android:paddingRight="@dimen/padding_three_dip"
+                android:paddingStart="@dimen/padding_zero_dip"
+                android:textSize="@dimen/medium_text"
+                app:ms_alwaysShowFloatingLabel="true"
+                app:ms_enableFloatingLabel="true"
+                app:ms_floatingLabelText="@string/exp_mode_of_conv"
+                app:ms_multiline="false" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_other_conv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/exp_others"
+                android:theme="@style/MyEditTextTheme">
+
+                <EditText
+                    android:id="@+id/et_other_conv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/ti_mode_distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lbl_beat_distance"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/et_mode_distance"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/padding_normal_8"
+                    android:layout_weight="2.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/conv_uom"
+                        style="@style/MediumHeaderTextStyle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/MyEditTextTheme">
+
+                <EditText
+                    android:id="@+id/tv_fare_total"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="@string/lbl_far_total"
+                    android:inputType="date"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/MyEditTextTheme">
+
+                <EditText
+                    android:id="@+id/tv_total_daily_expenses"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="@string/exp_totl_day"
+                    android:inputType="date"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

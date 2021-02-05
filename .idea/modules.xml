@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RSPLmSecSales.iml" filepath="$PROJECT_DIR$/.idea/modules/RSPLmSecSales.iml" group="RSPLmSecSales" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/RSPLmSecSales-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/RSPLmSecSales-app.iml" group="RSPLmSecSales/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="msecsales31_DEV_RSPL/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/msecsales31_DEV_RSPL.iml" filepath="$PROJECT_DIR$/.idea/msecsales31_DEV_RSPL.iml" group="msecsales31_DEV_RSPL" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        style="@style/CardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_normal_4"
+        android:layout_marginTop="@dimen/padding_normal_4"
+        android:elevation="1dp"
+        app:cardCornerRadius="4dp">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/swipe_delete_layout" />
+
+            <LinearLayout
+                android:id="@+id/view_foreground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/WHITE"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_normal_16">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/UtilsMediumTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/lbl_invoice_no" />
+
+                    <TextView
+                        style="@style/UtilsMediumTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/lbl_inv_qty" />
+
+                    <TextView
+                        style="@style/UtilsMediumTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/str_unit_price" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvInvNo"
+                        style="@style/UtilsMediumTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_normal_4"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tvInvQty"
+                        style="@style/UtilsMediumTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_normal_4"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tvMRP"
+                        style="@style/UtilsMediumTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_normal_4"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/padding_normal_8"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/item_dbstk_sku_desc"
+                            style="@style/UtilsSubHeaderStyles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_sku_desc" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.3"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <com.arteriatech.ss.msecsales.rspl.ui.EditextClearButton
+                                android:id="@+id/edit_quantity"
+                                style="@style/UtilsMediumTextStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.3"
+                                android:gravity="right"
+                                android:inputType="number"
+                                android:maxLength="8"
+                                app:clearButtonDrawable="@mipmap/ic_clear_button"
+                                app:clearButtonMode="always" />
+
+                            <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                                android:id="@+id/spUomType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:ms_alwaysShowFloatingLabel="true"
+                                app:ms_enableFloatingLabel="false"
+                                app:ms_multiline="false" />
+
+                        </LinearLayout>
+
+
+                        <!--  <EditText
+                              android:id="@+id/edit_batch_number"
+                              style="@style/EditBookTextEdit"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_weight="1"
+                              android:gravity="right"
+                              android:hint="@string/lbl_batch_number"
+                              android:paddingEnd="@dimen/padding_ten_dip"
+                              android:paddingLeft="@dimen/padding_three_dip"
+                              android:paddingRight="@dimen/padding_three_dip"
+                              android:textColor="@color/BLACK"
+                              android:textSize="@dimen/medium_text" />-->
+                    </LinearLayout>
+                </LinearLayout>
+
+               <!-- <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1.2"
+                        android:orientation="vertical">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/tv_cust_batch_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:focusableInTouchMode="true">
+
+                            <EditText
+                                android:id="@+id/edit_batch_number"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:hint="@string/lbl_batch_number"
+                                android:inputType="text"
+                                android:maxLength="10" />
+                            &lt;!&ndash; android:cursorVisible="false"
+                                android:editable="false"
+                                android:focusable="false"&ndash;&gt;
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tv_cust_batch_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        app:errorEnabled="true"
+                        android:theme="@style/MyEditTextTheme"
+                        android:focusableInTouchMode="true">
+
+                        <EditText
+                            android:id="@+id/edit_batch_number"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:hint="@string/lbl_batch_number"
+                            android:inputType="text"
+                            android:text=""
+                            android:maxLength="10" />
+                        <!-- android:cursorVisible="false"
+                            android:editable="false"
+                            android:focusable="false"-->
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                    android:id="@+id/sp_select_reason"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/padding_normal_4"
+                    android:layout_marginTop="@dimen/padding_normal_4"
+                    android:paddingEnd="@dimen/padding_zero_dip"
+                    android:paddingLeft="@dimen/padding_three_dip"
+                    android:paddingRight="@dimen/padding_three_dip"
+                    android:paddingStart="@dimen/padding_zero_dip"
+                    android:textSize="@dimen/medium_text"
+                    app:ms_alwaysShowFloatingLabel="true"
+                    app:ms_enableFloatingLabel="true"
+                    app:ms_floatingLabelText="Select Reason *"
+                    app:ms_multiline="false" />
+            </LinearLayout>
+
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--dist trend-->
+    <dimen name="dist_trend_dialog_width">500dp</dimen>
+
+</resources>

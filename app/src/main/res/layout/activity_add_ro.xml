@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.arteriatech.ss.msecsales.rspl.reports.returnorder.invoiceselection.AddInvoiceItemsActivity">
+
+    <include layout="@layout/appbar_layout" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cardBackgroundColor"
+        android:orientation="vertical">
+
+        <include layout="@layout/filter_display_layout" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                    android:layout_marginRight="@dimen/padding_normal_16"
+                    android:layout_marginLeft="@dimen/padding_normal_16"
+                    android:layout_marginTop="@dimen/padding_normal_16"
+                    android:layout_marginBottom="@dimen/padding_normal_8"
+                    android:id="@+id/spDMSDivision"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ms_alwaysShowFloatingLabel="true"
+                    app:ms_enableFloatingLabel="true"
+                    app:ms_floatingLabelText="@string/division"
+                    tools:layout_editor_absoluteX="104dp" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <include layout="@layout/no_record_found" />
+            </LinearLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+

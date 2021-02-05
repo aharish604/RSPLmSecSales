@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--material design spinner-->
+    <dimen name="shadow_size">8dip</dimen>
+    <dimen name="underline_top_spacing">8dp</dimen>
+    <dimen name="underline_bottom_spacing">4dp</dimen>
+    <dimen name="error_label_spacing">12dp</dimen>
+    <dimen name="floating_label_top_spacing">4dp</dimen>
+    <dimen name="floating_label_bottom_spacing">8dp</dimen>
+    <dimen name="floating_label_inside_spacing">12dp</dimen>
+    <dimen name="right_left_spinner_padding">8dp</dimen>
+    <dimen name="label_text_size">12sp</dimen>
+    <dimen name="min_content_height">20dp</dimen>
+
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="approval_dialog_width">300dp</dimen>
+    <dimen name="approval_dialog_editext_height">200dp</dimen>
+    <dimen name="xlarge_text_size">20sp</dimen>
+
+    <!--so list-->
+    <dimen name="so_list_qty_width">80dp</dimen>
+    <dimen name="so_list_delv_image">32dp</dimen>
+    <dimen name="so_list_status_image">24dp</dimen>
+    <dimen name="so_details_arrow_image">32dp</dimen>
+
+    <dimen name="visit_image_item_hdr">48dp</dimen>
+    <dimen name="visit_image_hdr">52dp</dimen>
+
+    <!--credit limit-->
+    <dimen name="chart_height">125dp</dimen>
+    <dimen name="util_textview_line_spacing">4dp</dimen>
+
+    <dimen name="chart_height_70">70dp</dimen>
+    <dimen name="xxlarge_text_size">23sp</dimen>
+
+    <!--summary-->
+    <dimen name="summary_chart_layout">150dp</dimen>
+    <dimen name="summay_chart_layout_value">115dp</dimen>
+
+    <dimen name="beat_call_image">24dp</dimen>
+
+    <!--dist trend-->
+    <dimen name="dist_trend_dialog_width">250dp</dimen>
+    <dimen name="height_one_dip">1dip</dimen>
+
+    <!--scheme-->
+    <dimen name="card_image_status">16dp</dimen>
+    <dimen name="caps_small_text_sp">12sp</dimen>
+
+    <!--action bar menu-->
+    <dimen name="menu_item_icon_size">24dp</dimen>
+    <dimen name="menu_item_size">48dp</dimen>
+</resources>

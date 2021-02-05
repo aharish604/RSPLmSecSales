@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/approval_dialog_width"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/Header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_normal_16"
+        android:text="@string/approve_title_comments" />
+
+    <include layout="@layout/single_line_lay" />
+
+    <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+        android:id="@+id/spReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_normal_16"
+        android:layout_marginRight="@dimen/padding_normal_16"
+        android:layout_marginTop="@dimen/padding_normal_16"
+        app:ms_alwaysShowFloatingLabel="true"
+        app:ms_enableFloatingLabel="true"
+        app:ms_floatingLabelText="@string/lbl_retailer_reason"
+        app:ms_multiline="false" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilRemarks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_normal_16"
+        android:layout_marginRight="@dimen/padding_normal_16"
+        android:layout_marginTop="@dimen/padding_normal_16"
+        android:hint="@string/lbl_ret_remarks"
+        android:orientation="horizontal"
+        android:theme="@style/MyEditTextTheme"
+        app:counterEnabled="true"
+        app:counterMaxLength="255">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etRemarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|top"
+            android:inputType="textMultiLine"
+            android:maxHeight="@dimen/approval_dialog_editext_height"
+            android:maxLength="255"
+            android:minLines="3"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:textCursorDrawable="@drawable/color_cursor"
+            app:backgroundTint="@color/secondaryColor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/padding_normal_16"
+        android:layout_marginLeft="@dimen/padding_normal_8"
+        android:layout_marginRight="@dimen/padding_normal_8"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btNo"
+            style="?attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel" />
+
+        <Button
+            android:id="@+id/btYes"
+            style="?attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save" />
+    </LinearLayout>
+
+
+</LinearLayout>

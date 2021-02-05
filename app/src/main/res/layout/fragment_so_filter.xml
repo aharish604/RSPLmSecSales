@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/llFilterView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_normal_16">
+
+        <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+            android:id="@+id/spMustSell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ms_alwaysShowFloatingLabel="true"
+            app:ms_enableFloatingLabel="true"
+            app:ms_floatingLabelText="@string/lbl_must_sell"
+            app:ms_multiline="false" />
+
+        <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+            android:id="@+id/spCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ms_alwaysShowFloatingLabel="true"
+            app:ms_enableFloatingLabel="true"
+            app:ms_floatingLabelText="@string/db_stock_category"
+            app:ms_multiline="false" />
+
+        <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+            android:id="@+id/spBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ms_alwaysShowFloatingLabel="true"
+            app:ms_enableFloatingLabel="true"
+            app:ms_floatingLabelText="@string/db_stock_brand"
+            app:ms_multiline="false" />
+
+      <!--  <com.arteriatech.ss.msecsales.ui.MaterialDesignSpinner
+            android:id="@+id/spCRSSKU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ms_alwaysShowFloatingLabel="true"
+            app:ms_enableFloatingLabel="true"
+            app:ms_floatingLabelText="@string/db_stock_crssku"
+            app:ms_multiline="false" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/padding_normal_4"
+            android:gravity="right"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btClear"
+                style="?attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clear" />
+            <Button
+                android:id="@+id/btCancel"
+                style="?attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel" />
+
+            <Button
+                android:id="@+id/btApply"
+                style="?attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_apply" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

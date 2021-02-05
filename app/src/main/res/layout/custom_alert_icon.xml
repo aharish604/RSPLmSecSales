@@ -1,0 +1,45 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/menu_item_size"
+    android:layout_height="@dimen/menu_item_size"
+    xmlns:tools="http://schemas.android.com/tools">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+    <FrameLayout
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/menu_item_icon_size"
+            android:layout_height="@dimen/menu_item_icon_size"
+            android:padding="2dp"
+            android:layout_gravity="center"
+            android:tint="@color/WHITE"
+            app:srcCompat="@drawable/ic_notification"/>
+
+        <FrameLayout
+            android:id="@+id/view_alert_red_circle"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:visibility="gone"
+            android:layout_gravity="top|end"
+            android:background="@drawable/badge_background">
+
+            <TextView
+                android:id="@+id/tvAlertCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/WHITE"
+                android:textSize="10sp"
+                />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

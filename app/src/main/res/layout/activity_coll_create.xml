@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <include layout="@layout/appbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/single_line_lay" />
+
+            <include layout="@layout/ll_retiler_name_no" />
+
+            <include layout="@layout/single_line_lay" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ScrollView
+                android:id="@+id/nsvContainer"
+                android:layout_above="@+id/keyboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    style="@style/UtilsItemSpacing"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/llOutValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+
+                                android:layout_marginTop="@dimen/padding_normal_8"
+                                android:layout_marginBottom="@dimen/padding_normal_8"
+                                android:id="@+id/spDMSDivision"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:ms_alwaysShowFloatingLabel="true"
+                                app:ms_enableFloatingLabel="true"
+                                app:ms_floatingLabelText="@string/division"
+                                tools:layout_editor_absoluteX="104dp" />
+                        </LinearLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clOutStanding"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/padding_normal_16">
+
+                            <TextView
+                                android:id="@+id/tvOutstanding"
+                                style="@style/UtilsMediumTextStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/lbl_outstanding"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <TextView
+                                android:id="@+id/tvOutstandingValue"
+                                style="@style/SubItemTextStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Sales Area"
+                                android:textSize="@dimen/util_normal_text_sp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tvOutstanding" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <include layout="@layout/single_line_lay" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llAdvanceLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clAdvance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/padding_normal_16"
+                            android:paddingTop="@dimen/padding_normal_16">
+
+                            <TextView
+                                android:id="@+id/tvAdavnceAmount"
+                                style="@style/UtilsMediumTextStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/advance_coll_amount"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <TextView
+                                android:id="@+id/tvAdavnceAmountValue"
+                                style="@style/SubItemTextStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Sales Area"
+                                android:textSize="@dimen/util_normal_text_sp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tvAdavnceAmount" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <include layout="@layout/single_line_lay" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiCollAmount"
+                        android:layout_marginTop="@dimen/padding_normal_16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etCollAmt"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:hint="@string/lbl_coll_crt_amount"
+                            android:focusable="false"
+                            android:focusableInTouchMode="true"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <LinearLayout
+                        android:id="@+id/llCollDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clCollDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/padding_normal_16"
+                            android:paddingTop="@dimen/padding_normal_16">
+
+                            <TextView
+                                android:id="@+id/tvCollDate"
+                                style="@style/UtilsMediumTextStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/lbl_coll_date"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <TextView
+                                android:id="@+id/tvCollDateValue"
+                                style="@style/SubItemTextStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Sales Area"
+                                android:textSize="@dimen/util_normal_text_sp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tvCollDate" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <include layout="@layout/single_line_lay" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                        android:id="@+id/spRefType"
+                        android:layout_marginTop="@dimen/padding_normal_16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_alwaysShowFloatingLabel="true"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_floatingLabelText="@string/lbl_coll_method"
+                        app:ms_multiline="false" />
+
+                    <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                        android:id="@+id/spPaymentMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_alwaysShowFloatingLabel="true"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_floatingLabelText="@string/lbl_coll_mode"
+                        app:ms_multiline="false" />
+
+                    <com.arteriatech.ss.msecsales.rspl.ui.MaterialDesignSpinner
+                        android:id="@+id/spBankName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ms_alwaysShowFloatingLabel="true"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_floatingLabelText="@string/lbl_bank_crt_name"
+                        app:ms_multiline="false" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiBranchName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etBranchName"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/lbl_branch_name"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiUtrName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etUTRName"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLength="16"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiChequeDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etChequeDate"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:cursorVisible="false"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="@string/lbl_cheque_date"
+                            android:inputType="date"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tiRemarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextTheme">
+
+                        <EditText
+                            android:id="@+id/etRemarks"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/tvRemarks_not_mandatory"
+                            android:maxLength="250"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                </LinearLayout>
+            </ScrollView>
+                <android.inputmethodservice.KeyboardView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/keyboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:keyPreviewLayout ="@layout/preview"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

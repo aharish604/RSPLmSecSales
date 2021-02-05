@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:mContext="com.arteriatech.mdc.bluestar.alerts.AlertsActivity">
+    <item
+        android:id="@+id/menu_confirm"
+        android:title="@string/btn_confirm"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+</menu>

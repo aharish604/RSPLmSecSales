@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardBackgroundColor">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvItem"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llCompetitorName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:paddingTop="@dimen/padding_normal_16"
+                            android:paddingBottom="@dimen/padding_normal_16">
+
+                            <TextView
+                                android:id="@+id/tvCompetitorNameHeading"
+                                style="@style/UtilsMediumTextStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginRight="16dp"
+                                android:text="@string/lbl_competitor_name"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tvCompetitorName"
+                                style="@style/SubItemTextStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="16dp"
+                                android:text="@string/value"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tvCompetitorNameHeading" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <include layout="@layout/single_line_lay" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llProductName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:paddingTop="@dimen/padding_normal_16"
+                            android:paddingBottom="@dimen/padding_normal_16">
+
+                            <TextView
+                                android:id="@+id/tvProductNameHeader"
+                                style="@style/UtilsMediumTextStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginRight="16dp"
+                                android:text="@string/lbl_product_name"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tvProductName"
+                                style="@style/SubItemTextStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="16dp"
+                                android:text="@string/value"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tvProductNameHeader" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <include layout="@layout/single_line_lay" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llSchemeName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:paddingTop="@dimen/padding_normal_16"
+                            android:paddingBottom="@dimen/padding_normal_16">
+
+                            <TextView
+                                android:id="@+id/SchemeNameHeader"
+                                style="@style/UtilsMediumTextStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginRight="16dp"
+                                android:text="@string/lbl_scheme_name"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tvSchemeName"
+                                style="@style/SubItemTextStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="16dp"
+                                android:text="@string/value"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/SchemeNameHeader" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <include layout="@layout/single_line_lay" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llMRP"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:paddingTop="@dimen/padding_normal_16"
+                                android:paddingBottom="@dimen/padding_normal_16">
+
+                                <TextView
+                                    android:id="@+id/tvMRPHeader"
+                                    style="@style/UtilsMediumTextStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:text="@string/lbl_mrp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tvMRP"
+                                    style="@style/SubItemTextStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginRight="16dp"
+                                    android:text="@string/value"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvMRPHeader" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <include layout="@layout/single_line_lay" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llRetailerMargin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:paddingTop="@dimen/padding_normal_16"
+                                android:paddingBottom="@dimen/padding_normal_16">
+
+                                <TextView
+                                    android:id="@+id/tvRetailerMarginHeader"
+                                    style="@style/UtilsMediumTextStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:text="@string/lbl_retailer_margin"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tvRetailerMargin"
+                                    style="@style/SubItemTextStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginRight="16dp"
+                                    android:text="@string/value"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvRetailerMarginHeader" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <include layout="@layout/single_line_lay" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llLandgPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:paddingTop="@dimen/padding_normal_16"
+                                android:paddingBottom="@dimen/padding_normal_16">
+
+                                <TextView
+                                    android:id="@+id/tvLandgPrice"
+                                    style="@style/UtilsMediumTextStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:text="@string/lbl_ret_landing_offer"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tvLandgPriceValue"
+                                    style="@style/SubItemTextStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginRight="16dp"
+                                    android:text="@string/value"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvLandgPrice" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <include layout="@layout/single_line_lay" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llwholesalePrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:paddingTop="@dimen/padding_normal_16"
+                                android:paddingBottom="@dimen/padding_normal_16">
+
+                                <TextView
+                                    android:id="@+id/tvwholesalePrice"
+                                    style="@style/UtilsMediumTextStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:text="@string/lbl_whole_landing_offer"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tvwholesalePriceValue"
+                                    style="@style/SubItemTextStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginRight="16dp"
+                                    android:text="@string/value"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvwholesalePrice" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <include layout="@layout/single_line_lay" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llConsumerOffer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:paddingTop="@dimen/padding_normal_16"
+                                android:paddingBottom="@dimen/padding_normal_16">
+
+                                <TextView
+                                    android:id="@+id/tvConsumerOfferHeader"
+                                    style="@style/UtilsMediumTextStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:text="@string/lbl_consumer_offer"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tvConsumerOffer"
+                                    style="@style/SubItemTextStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginRight="16dp"
+                                    android:text="@string/value"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvConsumerOfferHeader" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <include layout="@layout/single_line_lay" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llTradeOffer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:paddingTop="@dimen/padding_normal_16"
+                                android:paddingBottom="@dimen/padding_normal_16">
+
+                                <TextView
+                                    android:id="@+id/tvTradeOfferHeader"
+                                    style="@style/UtilsMediumTextStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:text="@string/lbl_trade_offer"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tvTradeOffer"
+                                    style="@style/SubItemTextStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginRight="16dp"
+                                    android:text="@string/value"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvTradeOfferHeader" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <include layout="@layout/single_line_lay" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llShelfLife"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:paddingTop="@dimen/padding_normal_16"
+                                android:paddingBottom="@dimen/padding_normal_16">
+
+                                <TextView
+                                    android:id="@+id/tvShelLifeHeader"
+                                    style="@style/UtilsMediumTextStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:text="@string/lbl_shelf_lif"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tvShelfLife"
+                                    style="@style/SubItemTextStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginRight="16dp"
+                                    android:text="@string/value"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvShelLifeHeader" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <include layout="@layout/single_line_lay" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llRemarks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:paddingTop="@dimen/padding_normal_16"
+                                android:paddingBottom="@dimen/padding_normal_16">
+
+                                <TextView
+                                    android:id="@+id/tvRemarksHeader"
+                                    style="@style/UtilsMediumTextStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:text="@string/lbl_ret_remarks"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tvRemarks"
+                                    style="@style/SubItemTextStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginRight="16dp"
+                                    android:text="@string/value"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvRemarksHeader" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <include layout="@layout/single_line_lay" />
+
+                        </LinearLayout>
+
+                        <include layout="@layout/single_line_lay" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include layout="@layout/appbar_layout" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

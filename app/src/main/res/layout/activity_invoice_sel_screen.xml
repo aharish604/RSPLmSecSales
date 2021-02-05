@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardBackgroundColor">
+
+    <include layout="@layout/appbar_layout" />
+
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include layout="@layout/ll_retiler_name_no" />
+
+            <include layout="@layout/single_line_lay" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvRetailerCatDetails"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_normal_4"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/WHITE">
+                    <LinearLayout
+                        style="@style/UtilsItemSpacing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/lbl_coll_amount" />
+
+                        <TextView
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/lbl_amt_coll" />
+
+                        <TextView
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/lbl_bal_amt" />
+
+                    </LinearLayout>
+                    <include layout="@layout/single_line_lay" />
+                    <LinearLayout
+                        style="@style/UtilsItemSpacing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_out_amount"
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/padding_normal_2"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_coll_amount"
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/padding_normal_2"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tv_balance_amount"
+                            style="@style/UtilsMediumTextStyle"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/padding_normal_2"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--<android.support.v7.widget.CardView
+                android:id="@+id/cvItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/CardViewStyle"
+                android:orientation="vertical">-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <ScrollView
+                        android:id="@+id/sv_invoice_list"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/keyboard_custom_invoice_sel"
+                        android:fillViewport="false"
+                        style="@style/CardViewStyleNoTopMargin"
+                        >
+
+                    </ScrollView>
+                    <android.inputmethodservice.KeyboardView
+                        android:layout_alignParentBottom="true"
+                        android:id="@+id/keyboard_custom_invoice_sel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:keyPreviewLayout ="@layout/preview"
+                        android:visibility="gone"
+                        />
+
+                </RelativeLayout>
+           <!-- </android.support.v7.widget.CardView>-->
+
+
+
+        </LinearLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
